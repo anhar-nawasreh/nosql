@@ -48,7 +48,7 @@ public class JWTService {
     public String getRefreshToken(UserPrincipal userPrincipal) {
         return JWT.create()
                 .withSubject(userPrincipal.getUsername())
-                .withIssuer(DWAIRI)
+                .withIssuer(A)
                 .withIssuedAt(getTimeAfter(0))
                 .withExpiresAt(getTimeAfter(REFRESH_TOKEN_EXPIRATION_TIME))
                 .sign(algorithm);
@@ -95,7 +95,7 @@ public class JWTService {
     }
 
     private JWTVerifier getJWTVerifier() {
-        return JWT.require(algorithm).withIssuer(DWAIRI).build();
+        return JWT.require(algorithm).withIssuer(A).build();
     }
 
     private Date getTimeAfter(long minutes) {
