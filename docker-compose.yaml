@@ -3,7 +3,7 @@ version: "3.9"
 services:
 
   master:
-    image: mdwairi/db
+    image: a/db
     container_name: master
     links:
       - worker
@@ -12,7 +12,7 @@ services:
     networks:
       - dbnetwork
   worker1:
-    image: mdwairi/db
+    image: a/db
     container_name: worker1
     environment:
       - NODE_MODE=replica
@@ -23,7 +23,7 @@ services:
     networks:
       - dbnetwork
   worker2:
-    image: mdwairi/db
+    image: a/db
     container_name: worker2
     environment:
       - NODE_MODE=replica
