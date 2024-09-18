@@ -9,5 +9,5 @@ public class JWTConstant {
     public static final Long REFRESH_TOKEN_EXPIRATION_TIME = 100000L;
     public static final String TOKEN_PREFIX = "Bearer ";
     public static final String AUTHORITIES = "authorities";
-    public static final String DWAIRI = "DWAIRI";
+    public static final String A = "A";
 }
