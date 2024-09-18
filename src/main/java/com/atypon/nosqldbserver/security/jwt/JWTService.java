@@ -38,7 +38,7 @@ public class JWTService {
 
         return JWT.create()
                 .withSubject(userPrincipal.getUsername())
-                .withIssuer(DWAIRI)
+                .withIssuer(A)
                 .withClaim(AUTHORITIES, claims)
                 .withIssuedAt(getTimeAfter(0))
                 .withExpiresAt(getTimeAfter(ACCESS_TOKEN_EXPIRATION_TIME))
